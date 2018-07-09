@@ -10,8 +10,7 @@ import {
     Input
 } from 'reactstrap';
 import { connect } from 'react-redux';
-import { addItem } from '../actions/itemActions';
-import uuid from 'uuid';
+import { addItem } from '../actions/itemActions'
 
 class ItemModal extends Component {
 
@@ -35,7 +34,6 @@ class ItemModal extends Component {
     onSubmit = (e) => {
         e.preventDefault();
         const newItem = {
-            id: uuid(),
             name: this.state.name
         }
 
@@ -72,12 +70,12 @@ class ItemModal extends Component {
 
                                 ></Input>
                             </FormGroup>
+                            <Button
+                                color="dark"
+                                style={{ marginTop: '2rem' }}
+                                block
+                            >Add Item</Button>
                         </Form>
-                        <Button
-                            color="dark"
-                            style={{ marginTop: '2rem' }}
-                            block
-                        ></Button>
                     </ModalBody>
                 </Modal>
             </div>
